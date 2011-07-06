@@ -29,8 +29,8 @@
   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="js/libs/modernizr-2.0.min.js"></script>
-  <script src="js/libs/respond.min.js"></script>
+  <script src="/js/libs/modernizr-2.0.min.js"></script>
+  <script src="/js/libs/respond.min.js"></script>
 </head>
 
 <body>
@@ -659,7 +659,7 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.1.min.js"><\/script>')</script>
 
 
