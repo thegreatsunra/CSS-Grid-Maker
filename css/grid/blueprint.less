@@ -1,0 +1,470 @@
+/* -----------------------------------------------------------------------
+
+HTML5 Boilerplate CSS Grid Framework
+Extended by Dane Petersen
+Last Updated: June 5, 2011
+
+----------------------------------------------------------------------- */
+
+
+/* Feel free to edit these variables. For great justice. */
+/* ----------------------------------------------------------------------- */
+
+/* @column_width: 6.382978723404255%; */ /* multiplies out to 100% in a 12-column liquid layout */
+/* @column_width: 60px; */
+/* This allows Blueprint CSS code compatibility: */
+@column_width: 30px;
+
+/* @gutter_width: 2.127659574468085%; */ /* multiplies out to 100% in a 12-column liquid layout */
+/* @gutter_width: 20px; */
+/* This allows Blueprint CSS code compatibility: */
+@gutter_width: 10px;
+
+/* @column_number: 12; */
+/* This allows Blueprint CSS code compatibility: */
+@column_number: 24;
+
+
+/*
+Okay, stop editing.
+Unless you're doing something really awesome.
+Like a liquid layout.
+That would be awesome.
+*/
+
+
+/* Defining variable for the number of columns between gutters */
+/* ----------------------------------------------------------------------- */
+@gutter_number: (@column_number - 1);
+
+/* Defining variable for the width of the layout container */
+/* ----------------------------------------------------------------------- */
+/* This allows Blueprint CSS code compatibility: */
+@container_width: (@column_width * @column_number) + (@gutter_width * @gutter_number);
+
+/* This allows 960.gs code compatibility: */
+/*
+@container_width: (@column_width * @column_number) + (@gutter_width * @gutter_number) + @gutter_width;
+*/
+
+/* Defining variables for each grid span */
+/* ----------------------------------------------------------------------- */
+@span_1: @column_width; /* 60px (in 940px solid container) */
+@span_2: (@column_width * 2) + @gutter_width; /* 140px */
+@span_3: (@column_width * 3) + (@gutter_width * 2); /* 220px */
+@span_4: (@column_width * 4) + (@gutter_width * 3); /* 300px */
+@span_5: (@column_width * 5) + (@gutter_width * 4); /* 380px */
+@span_6: (@column_width * 6) + (@gutter_width * 5); /* 460px */
+@span_7: (@column_width * 7) + (@gutter_width * 6); /* 540px */
+@span_8: (@column_width * 8) + (@gutter_width * 7); /* 620px */
+@span_9: (@column_width * 9) + (@gutter_width * 8); /* 700px */
+@span_10: (@column_width * 10) + (@gutter_width * 9); /* 780px */
+@span_11: (@column_width * 11) + (@gutter_width * 10); /* 860px */
+@span_12: (@column_width * 12) + (@gutter_width * 11); /* 940px */
+
+
+@span_13: (@column_width * 13) + (@gutter_width * 12);
+@span_14: (@column_width * 14) + (@gutter_width * 13);
+@span_15: (@column_width * 15) + (@gutter_width * 14);
+@span_16: (@column_width * 16) + (@gutter_width * 15);
+@span_17: (@column_width * 17) + (@gutter_width * 16);
+@span_18: (@column_width * 18) + (@gutter_width * 17);
+@span_19: (@column_width * 19) + (@gutter_width * 18);
+@span_20: (@column_width * 20) + (@gutter_width * 19);
+@span_21: (@column_width * 21) + (@gutter_width * 20);
+@span_22: (@column_width * 22) + (@gutter_width * 21);
+@span_23: (@column_width * 23) + (@gutter_width * 22);
+@span_24: (@column_width * 24) + (@gutter_width * 23);
+
+
+/* Defining layout container */
+/* ----------------------------------------------------------------------- */
+.container {
+	width: @container_width;
+	margin: 0 auto 0 auto;
+}
+
+/* Defining styles that apply to every grid column span */
+/* ----------------------------------------------------------------------- */
+.span-1,
+.span-2,
+.span-3, 
+.span-4, 
+.span-5, 
+.span-6, 
+.span-7, 
+.span-8, 
+.span-9, 
+.span-10, 
+.span-11, 
+.span-12 {
+	display: inline;
+	position: relative;
+	float: left;
+/* This allows Blueprint CSS code compatibility: */
+	margin-right: @gutter_width;
+/* This allows 960.gs code compatibility: */
+/*
+	margin-left: @gutter_width / 2;
+	margin-right: @gutter_width / 2;
+*/
+}
+
+/* This allows Blueprint CSS code compatibility: */
+/*
+.span-13,
+.span-14,
+.span-15, 
+.span-16, 
+.span-17, 
+.span-18, 
+.span-19, 
+.span-20, 
+.span-21, 
+.span-22, 
+.span-23, 
+.span-24 {
+	display: inline;
+	position: relative;
+	float: left;
+* This allows Blueprint CSS code compatibility: *
+	margin-right: @gutter_width;
+* This allows 960.gs code compatibility: *
+*
+	margin-left: @gutter_width / 2;
+	margin-right: @gutter_width / 2;
+*
+}
+*/
+
+/* Defining styles that apply to each individual grid span */
+/* ----------------------------------------------------------------------- */
+.span-1 { width:@span_1; } /* 60px (in 940px solid container) */
+.span-2 { width:@span_2; } /* 140px */
+.span-3 { width:@span_3; } /* 220px */
+.span-4 { width:@span_4; } /* 300px */
+.span-5 { width:@span_5; } /* 380px */
+.span-6 { width:@span_6; } /* 460px */
+.span-7 { width:@span_7; } /* 540px */
+.span-8 { width:@span_8; } /* 620px */
+.span-9 { width:@span_9; } /* 700px */
+.span-10 { width:@span_10; } /* 780px */
+.span-11 { width:@span_11; } /* 860px */
+/* This allows Blueprint CSS code compatibility: */
+.span-12 { width:@span_12; } /* 940px */
+/* This allows 960.gs code compatibility: */
+/*
+.span-12 { width:@span_12;}
+*/
+
+/* This allows Blueprint CSS code compatibility: */
+
+.span-13 { width:@span_13; }
+.span-14 { width:@span_14; }
+.span-15 { width:@span_15; }
+.span-16 { width:@span_16; }
+.span-17 { width:@span_17; }
+.span-18 { width:@span_18; }
+.span-19 { width:@span_19; }
+.span-20 { width:@span_20; }
+.span-21 { width:@span_21; }
+.span-22 { width:@span_22; }
+.span-23 { width:@span_23; }
+.span-24 { width:@span_24; margin-right: 0;}
+
+
+/* This allows Blueprint CSS code compatibility: */
+.last {
+	margin-right: 0 !important;
+}
+
+/* This allows 960.gs code compatibility: */
+/*
+.alpha { margin-left: 0; }
+.omega { margin-right: 0; }
+*/
+
+/* Defining styles for nested grid spans (only necessary for fluid layouts) */
+/* ----------------------------------------------------------------------- */
+/* 
+.span-11 .span-1,
+.span-11 .span-2,
+.span-11 .span-3,
+.span-11 .span-4,
+.span-11 .span-5,
+.span-11 .span-6,
+.span-11 .span-7,
+.span-11 .span-8,
+.span-11 .span-9,
+.span-11 .span-10 {margin-right: (@gutter_width / @span_11) * 100;}
+
+.span-11 .span-1 { width: (@span_1 / @span_11) * 100; }
+.span-11 .span-2 { width: (@span_2 / @span_11) * 100; }
+.span-11 .span-3 { width: (@span_3 / @span_11) * 100; }
+.span-11 .span-4 { width: (@span_4 / @span_11) * 100; }
+.span-11 .span-5 { width: (@span_5 / @span_11) * 100; }
+.span-11 .span-6 { width: (@span_6 / @span_11) * 100; }
+.span-11 .span-7 { width: (@span_7 / @span_11) * 100; }
+.span-11 .span-8 { width: (@span_8 / @span_11) * 100; }
+.span-11 .span-9 { width: (@span_9 / @span_11) * 100; }
+.span-11 .span-10 { width: (@span_10 / @span_11) * 100; }
+
+.span-10 .span-1,
+.span-10 .span-2,
+.span-10 .span-3,
+.span-10 .span-4,
+.span-10 .span-5,
+.span-10 .span-6,
+.span-10 .span-7,
+.span-10 .span-8,
+.span-10 .span-9,
+.span-10 .span-10 {margin-right: (@gutter_width / @span_10) * 100;}
+
+.span-10 .span-1 { width: (@span_1 / @span_10) * 100; }
+.span-10 .span-2 { width: (@span_2 / @span_10) * 100; }
+.span-10 .span-3 { width: (@span_3 / @span_10) * 100; }
+.span-10 .span-4 { width: (@span_4 / @span_10) * 100; }
+.span-10 .span-5 { width: (@span_5 / @span_10) * 100; }
+.span-10 .span-6 { width: (@span_6 / @span_10) * 100; }
+.span-10 .span-7 { width: (@span_7 / @span_10) * 100; }
+.span-10 .span-8 { width: (@span_8 / @span_10) * 100; }
+.span-10 .span-9 { width: (@span_9 / @span_10) * 100; }
+
+.span-9 .span-1,
+.span-9 .span-2,
+.span-9 .span-3,
+.span-9 .span-4,
+.span-9 .span-5,
+.span-9 .span-6,
+.span-9 .span-7,
+.span-9 .span-8 {margin-right: (@gutter_width / @span_9) * 100;}
+
+.span-9 .span-1 { width: (@span_1 / @span_9) * 100; }
+.span-9 .span-2 { width: (@span_2 / @span_9) * 100; }
+.span-9 .span-3 { width: (@span_3 / @span_9) * 100; }
+.span-9 .span-4 { width: (@span_4 / @span_9) * 100; }
+.span-9 .span-5 { width: (@span_5 / @span_9) * 100; }
+.span-9 .span-6 { width: (@span_6 / @span_9) * 100; }
+.span-9 .span-7 { width: (@span_7 / @span_9) * 100; }
+.span-9 .span-8 { width: (@span_8 / @span_9) * 100; }
+
+.span-8 .span-1,
+.span-8 .span-2,
+.span-8 .span-3,
+.span-8 .span-4,
+.span-8 .span-5,
+.span-8 .span-6,
+.span-8 .span-7 {margin-right: (@gutter_width / @span_8) * 100;}
+
+.span-8 .span-1 { width: (@span_1 / @span_8) * 100; }
+.span-8 .span-2 { width: (@span_2 / @span_8) * 100; }
+.span-8 .span-3 { width: (@span_3 / @span_8) * 100; }
+.span-8 .span-4 { width: (@span_4 / @span_8) * 100; }
+.span-8 .span-5 { width: (@span_5 / @span_8) * 100; }
+.span-8 .span-6 { width: (@span_6 / @span_8) * 100; }
+.span-8 .span-7 { width: (@span_7 / @span_8) * 100; }
+
+.span-7 .span-1,
+.span-7 .span-2,
+.span-7 .span-3,
+.span-7 .span-4,
+.span-7 .span-5,
+.span-7 .span-6 {margin-right: (@gutter_width / @span_7) * 100;}
+
+.span-7 .span-1 { width: (@span_1 / @span_7) * 100; }
+.span-7 .span-2 { width: (@span_2 / @span_7) * 100; }
+.span-7 .span-3 { width: (@span_3 / @span_7) * 100; }
+.span-7 .span-4 { width: (@span_4 / @span_7) * 100; }
+.span-7 .span-5 { width: (@span_5 / @span_7) * 100; }
+.span-7 .span-6 { width: (@span_6 / @span_7) * 100; }
+
+.span-6 .span-1,
+.span-6 .span-2,
+.span-6 .span-3,
+.span-6 .span-4,
+.span-6 .span-5 {margin-right: (@gutter_width / @span_6) * 100;}
+
+.span-6 .span-1 { width: (@span_1 / @span_6) * 100; }
+.span-6 .span-2 { width: (@span_2 / @span_6) * 100; }
+.span-6 .span-3 { width: (@span_3 / @span_6) * 100; }
+.span-6 .span-4 { width: (@span_4 / @span_6) * 100; }
+.span-6 .span-5 { width: (@span_5 / @span_6) * 100; }
+
+.span-5 .span-1,
+.span-5 .span-2,
+.span-5 .span-3,
+.span-5 .span-4 {margin-right: (@gutter_width / @span_5) * 100;}
+
+.span-5 .span-1 { width: (@span_1 / @span_5) * 100; }
+.span-5 .span-2 { width: (@span_2 / @span_5) * 100; }
+.span-5 .span-3 { width: (@span_3 / @span_5) * 100; }
+.span-5 .span-4 { width: (@span_4 / @span_5) * 100; }
+
+.span-4 .span-1,
+.span-4 .span-2,
+.span-4 .span-3 {margin-right: (@gutter_width / @span_4) * 100;}
+
+.span-4 .span-1 { width: (@span_1 / @span_4) * 100; }
+.span-4 .span-2 { width: (@span_2 / @span_4) * 100; }
+.span-4 .span-3 { width: (@span_3 / @span_4) * 100; }
+
+.span-3 .span-1,
+.span-3 .span-2 {margin-right: (@gutter_width / @span_3) * 100;}
+
+.span-3 .span-1 { width: (@span_1 / @span_3) * 100; }
+.span-3 .span-2 { width: (@span_2 / @span_3) * 100; }
+
+.span-2 .span-1 {margin-right: (@gutter_width / @span_2) * 100;}
+
+.span-2 .span-1 { width: (@span_1 / @span_2) * 100; }
+*/
+
+/* Defining styles for appending and prepending grid spans */
+/* ----------------------------------------------------------------------- */
+.append-1 { padding-right: (@span_1 + @gutter_width); }
+.append-2 { padding-right: (@span_2 + @gutter_width); }
+.append-3 { padding-right: (@span_3 + @gutter_width); }
+.append-4 { padding-right: (@span_4 + @gutter_width); }
+.append-5 { padding-right: (@span_5 + @gutter_width); }
+.append-6 { padding-right: (@span_6 + @gutter_width); }
+.append-7 { padding-right: (@span_7 + @gutter_width); }
+.append-8 { padding-right: (@span_8 + @gutter_width); }
+.append-9 { padding-right: (@span_9 + @gutter_width); }
+.append-10 { padding-right: (@span_10 + @gutter_width); }
+.append-11 { padding-right: (@span_11 + @gutter_width); }
+
+/* This allows Blueprint CSS code compatibility: */
+
+.append-12 { padding-right: (@span_12 + @gutter_width); }
+.append-13 { padding-right: (@span_13 + @gutter_width); }
+.append-14 { padding-right: (@span_14 + @gutter_width); }
+.append-15 { padding-right: (@span_15 + @gutter_width); }
+.append-16 { padding-right: (@span_16 + @gutter_width); }
+.append-17 { padding-right: (@span_17 + @gutter_width); }
+.append-18 { padding-right: (@span_18 + @gutter_width); }
+.append-19 { padding-right: (@span_19 + @gutter_width); }
+.append-20 { padding-right: (@span_20 + @gutter_width); }
+.append-21 { padding-right: (@span_21 + @gutter_width); }
+.append-22 { padding-right: (@span_22 + @gutter_width); }
+.append-23 { padding-right: (@span_23 + @gutter_width); }
+
+
+.prepend-1 { padding-left: (@span_1 + @gutter_width); }
+.prepend-2 { padding-left: (@span_2 + @gutter_width); }
+.prepend-3 { padding-left: (@span_3 + @gutter_width); }
+.prepend-4 { padding-left: (@span_4 + @gutter_width); }
+.prepend-5 { padding-left: (@span_5 + @gutter_width); }
+.prepend-6 { padding-left: (@span_6 + @gutter_width); }
+.prepend-7 { padding-left: (@span_7 + @gutter_width); }
+.prepend-8 { padding-left: (@span_8 + @gutter_width); }
+.prepend-9 { padding-left: (@span_9 + @gutter_width); }
+.prepend-10 { padding-left: (@span_10 + @gutter_width); }
+.prepend-11 { padding-left: (@span_11 + @gutter_width); }
+
+/* This allows Blueprint CSS code compatibility: */
+
+.prepend-12 { padding-left: (@span_12 + @gutter_width); }
+.prepend-13 { padding-left: (@span_13 + @gutter_width); }
+.prepend-14 { padding-left: (@span_14 + @gutter_width); }
+.prepend-15 { padding-left: (@span_15 + @gutter_width); }
+.prepend-16 { padding-left: (@span_16 + @gutter_width); }
+.prepend-17 { padding-left: (@span_17 + @gutter_width); }
+.prepend-18 { padding-left: (@span_18 + @gutter_width); }
+.prepend-19 { padding-left: (@span_19 + @gutter_width); }
+.prepend-20 { padding-left: (@span_20 + @gutter_width); }
+.prepend-21 { padding-left: (@span_21 + @gutter_width); }
+.prepend-22 { padding-left: (@span_22 + @gutter_width); }
+.prepend-23 { padding-left: (@span_23 + @gutter_width); }
+
+
+/* Defining styles for pushing and pulling grid spans */
+/* ----------------------------------------------------------------------- */
+
+.push-1 { left: (@span_1 + @gutter_width); }
+.push-2 { left: (@span_2 + @gutter_width); }
+.push-3 { left: (@span_3 + @gutter_width); }
+.push-4 { left: (@span_4 + @gutter_width); }
+.push-5 { left: (@span_5 + @gutter_width); }
+.push-6 { left: (@span_6 + @gutter_width); }
+.push-7 { left: (@span_7 + @gutter_width); }
+.push-8 { left: (@span_8 + @gutter_width); }
+.push-9 { left: (@span_9 + @gutter_width); }
+.push-10 { left: (@span_10 + @gutter_width); }
+.push-11 { left: (@span_11 + @gutter_width); }
+
+/* This allows Blueprint CSS code compatibility: */
+
+.push-12 { left: (@span_12 + @gutter_width); }
+.push-13 { left: (@span_13 + @gutter_width); }
+.push-14 { left: (@span_14 + @gutter_width); }
+.push-15 { left: (@span_15 + @gutter_width); }
+.push-16 { left: (@span_16 + @gutter_width); }
+.push-17 { left: (@span_17 + @gutter_width); }
+.push-18 { left: (@span_18 + @gutter_width); }
+.push-19 { left: (@span_19 + @gutter_width); }
+.push-20 { left: (@span_20 + @gutter_width); }
+.push-21 { left: (@span_21 + @gutter_width); }
+.push-22 { left: (@span_22 + @gutter_width); }
+.push-23 { left: (@span_23 + @gutter_width); }
+
+
+
+.pull-1 { left: -1 * (@span_1 + @gutter_width); }
+.pull-2 { left: -1 * (@span_2 + @gutter_width); }
+.pull-3 { left: -1 * (@span_3 + @gutter_width); }
+.pull-4 { left: -1 * (@span_4 + @gutter_width); }
+.pull-5 { left: -1 * (@span_5 + @gutter_width); }
+.pull-6 { left: -1 * (@span_6 + @gutter_width); }
+.pull-7 { left: -1 * (@span_7 + @gutter_width); }
+.pull-8 { left: -1 * (@span_8 + @gutter_width); }
+.pull-9 { left: -1 * (@span_9 + @gutter_width); }
+.pull-10 { left: -1 * (@span_10 + @gutter_width); }
+.pull-11 { left: -1 * (@span_11 + @gutter_width); }
+
+/* This allows Blueprint CSS code compatibility: */
+
+.pull-12 { left: -1 * (@span_12 + @gutter_width); }
+.pull-13 { left: -1 * (@span_13 + @gutter_width); }
+.pull-14 { left: -1 * (@span_14 + @gutter_width); }
+.pull-15 { left: -1 * (@span_15 + @gutter_width); }
+.pull-16 { left: -1 * (@span_16 + @gutter_width); }
+.pull-17 { left: -1 * (@span_17 + @gutter_width); }
+.pull-18 { left: -1 * (@span_18 + @gutter_width); }
+.pull-19 { left: -1 * (@span_19 + @gutter_width); }
+.pull-20 { left: -1 * (@span_20 + @gutter_width); }
+.pull-21 { left: -1 * (@span_21 + @gutter_width); }
+.pull-22 { left: -1 * (@span_22 + @gutter_width); }
+.pull-23 { left: -1 * (@span_23 + @gutter_width); }
+
+
+
+/* Defining styles for applying a right border to spans */
+/* ----------------------------------------------------------------------- */
+
+.border {
+	padding-right: (@gutter_width / 2) - 1;
+	margin-right: (@gutter_width / 2);
+	border-right: 1px solid #ddd;
+}
+
+/* Keeping images from blowing up the grid */
+/* Also causes them to automatically resize in liquid grid layouts */
+/* ----------------------------------------------------------------------- */
+
+.container img {
+	max-width: 100%;
+}
+
+/* Automatically clearing floats */
+/* ----------------------------------------------------------------------- */
+
+.container:before, .container:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.container:after { clear: both; }
+.container { zoom: 1; }
+
+/* Manually clearing floats */
+/* ----------------------------------------------------------------------- */
+
+.clear { clear:both; }
+
+/* # # # */
