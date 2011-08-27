@@ -106,6 +106,13 @@ class Generate extends CI_Controller {
 			$data['css'] .= ".last{margin-right:0 !important;}\n";
 		}
 	
+//prepend+prefix
+//append+suffix
+//push+pull
+
+	$data['css'] .= ".border{padding-right:9px;margin-right:10px;border-right:1px solid #ddd;}\n.container img{max-width:100%;}\n.container:before,.container:after{content:\"\0020\";display:block;height:0;overflow:hidden;}\n.container:after{clear:both;}\n.container{zoom:1;}\n.clear{clear:both;}";
+
+
 	
 		$this->load->view('generate_css', $data);
 	}
